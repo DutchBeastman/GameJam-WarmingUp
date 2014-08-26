@@ -2,13 +2,14 @@
 using System.Collections;
 
 public class Movement : MonoBehaviour {
-	public float movementSpeed = 10;
+	public float movementSpeed = 200;
+	public float revestmovementSpeed = -200;
 	void Start(){
 		//Transform.position = new Vector3 (0, 3, 0);
 	}
 	void Update () {
 		if (Input.GetKey ("w")) {
-						rigidbody.AddRelativeForce (0, 100, 0);
+						rigidbody.AddRelativeForce (0, movementSpeed, 0);
 				} else {
 						rigidbody.velocity = new Vector3 (0, 0, 0);
 				}
