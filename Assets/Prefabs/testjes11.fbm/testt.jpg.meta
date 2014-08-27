@@ -1,12 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: d9a6d71d8d967474aa344ae07281dfae
-=======
-guid: 2aa6c9d2fe6a72a4780af5ea569af7cb
->>>>>>> bbe0abf2157f9092c976df24156c84a32ce0ee76
+guid: 5135fb9a381737740988d43327f6fd65
 TextureImporter:
   fileIDToRecycleName:
-    21300000: big rock texture
+    21300000: testt
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
