@@ -6,7 +6,6 @@ public class CameraFollow : MonoBehaviour {
 	public Transform target;
 	public float smoothTime = 0.55f;
 	private Vector3 velocity = Vector3.zero;
-	private int degrees = 10;
 
 	void Start(){
 	}
