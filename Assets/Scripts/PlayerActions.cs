@@ -34,11 +34,8 @@ public class PlayerActions : MonoBehaviour {
 				if (hit.collider.name == "MoveableObject") {
 						Rigidbody body = hit.collider.attachedRigidbody;
 						if (body == null || body.isKinematic)
-<<<<<<< HEAD
 								return;
-=======
 						return;
->>>>>>> origin/Develop
 		
 						if (hit.moveDirection.y < -0.3F)
 						return;
@@ -46,28 +43,19 @@ public class PlayerActions : MonoBehaviour {
 						Vector3 pushDir = new Vector3 (hit.moveDirection.x, 0, hit.moveDirection.z);
 						body.velocity = pushDir * pushPower;
 				}
-<<<<<<< HEAD
 		}
-
-=======
-
-	}
->>>>>>> origin/Develop
-
-
-
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.tag == "Pickup")
 		{
 			nrOfPickups += 1;
-
 			Destroy(other.gameObject);
-
 			if(nrOfPickups == nrTotalPickups)
 			{
 				Debug.Log("Proceed...");
 			}
 		}
 	}
-}
+	}
+
+
