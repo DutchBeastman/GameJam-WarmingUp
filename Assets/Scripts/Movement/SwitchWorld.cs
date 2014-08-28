@@ -5,38 +5,43 @@ public class SwitchWorld : MonoBehaviour
 {
 	private bool bool1 = false;
 	private bool bool2 = true;
+	private Vector3 position1;
+	private Vector3 position2;
 
 	void Update()
 	{
-		Vector3 world1 = new Vector3(0,0.5f,0);
-		Vector3 world2 = new Vector3(0,25f,0);
+
+
 
 		if(Input.GetKeyDown("v"))
 		{
 			//gameObject.transform.position = switches;
 			if (bool1)
 			{
+				gameObject.collider.enabled = false;
+				position2 = new Vector3(transform.position.x,0,transform.position.z);
+
 				bool2 = true;
 				bool1 = false;
 
-				gameObject.transform.position = world2;
+				gameObject.transform.position = position2;
+				gameObject.collider.enabled = true;
 
 			}
 
 			else if (bool2)
 			{
+				gameObject.collider.enabled = false;
+				position1 = new Vector3(transform.position.x,-25,transform.position.z);
 				bool1 = true;
 				bool2 = false;
-
-				gameObject.transform.position = world1;
+				gameObject.transform.position = position1;
+				gameObject.collider.enabled = true;
 
 			}
 		}
 	}
 
-	void OnCollisionEnter()
-	{
 
-	}
 	
 }
