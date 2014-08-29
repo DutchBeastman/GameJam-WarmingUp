@@ -55,6 +55,7 @@ public class PlayerActions : MonoBehaviour {
 			if(nrOfPickups == nrTotalPickups)
 			{
 				Debug.Log("Proceed...");
+
 			}
 		}
 	}
