@@ -48,17 +48,24 @@ public class PlayerActions : MonoBehaviour {
 			
 	void OnTriggerEnter(Collider coll)
 	{
+		if(nrOfPickups == nrTotalPickups)
+		{
+			
+			
+		
+			if(coll.tag == "Exit")
+			{
+				Application.LoadLevel("Exit");
+			}
+		}
 
+		
 		if(coll.tag == "Pickup")
 		{
 			Debug.Log("jkldsfa");
 			nrOfPickups += 1;
 			Destroy(coll.gameObject);
-			if(nrOfPickups == nrTotalPickups)
-			{
-				Debug.Log("Proceed...");
 
-			}
 		}
 	}
 }
