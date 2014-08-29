@@ -46,12 +46,14 @@ public class PlayerActions : MonoBehaviour {
 				}
 	}
 			
-	void OnTriggerEnter(Collider other)
+	void OnTriggerEnter(Collider coll)
 	{
-		if(other.tag == "Pickup")
+
+		if(coll.tag == "Pickup")
 		{
+			Debug.Log("jkldsfa");
 			nrOfPickups += 1;
-			Destroy(other.gameObject);
+			Destroy(coll.gameObject);
 			if(nrOfPickups == nrTotalPickups)
 			{
 				Debug.Log("Proceed...");
