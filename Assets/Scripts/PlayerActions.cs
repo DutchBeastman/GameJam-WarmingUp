@@ -31,7 +31,7 @@ public class PlayerActions : MonoBehaviour {
 	
 	}
 	void OnControllerColliderHit(ControllerColliderHit hit) {
-		if (hit.collider.name == "MoveableObject") {
+		if (hit.collider.tag == "MoveableObject") {
 			Rigidbody body = hit.collider.attachedRigidbody;
 			if (body == null || body.isKinematic)
 

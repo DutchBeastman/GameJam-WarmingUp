@@ -27,5 +27,17 @@ public class Movement : MonoBehaviour {
 		if (Input.GetKey ("a")) {
 			transform.Rotate(0,-5,0);
 		}
+
+		if (Input.GetKey ("q")) {
+			rigidbody.AddRelativeForce(-movementSpeed,0,movementSpeed);				
+		} else {
+			rigidbody.velocity = new Vector3 (0, 0, 0);
+		}
+		
+		if (Input.GetKey ("e")) {
+			rigidbody.AddRelativeForce(movementSpeed,0,movementSpeed);				
+		} else {
+			rigidbody.velocity = new Vector3 (0, 0, 0);
+		}
 	}
 }

@@ -19,7 +19,7 @@ public class SwitchWorld : MonoBehaviour
 			if (bool1)
 			{
 				gameObject.collider.enabled = false;
-				position2 = new Vector3(transform.position.x,0,transform.position.z);
+				position2 = new Vector3(transform.position.x,-0.01999783f,transform.position.z);
 
 				bool2 = true;
 				bool1 = false;
@@ -32,7 +32,7 @@ public class SwitchWorld : MonoBehaviour
 			else if (bool2)
 			{
 				gameObject.collider.enabled = false;
-				position1 = new Vector3(transform.position.x,-25,transform.position.z);
+				position1 = new Vector3(transform.position.x,-26.85854f,transform.position.z);
 				bool1 = true;
 				bool2 = false;
 				gameObject.transform.position = position1;
